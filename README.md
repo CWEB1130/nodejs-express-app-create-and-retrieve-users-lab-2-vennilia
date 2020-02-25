@@ -1,10 +1,13 @@
+#  Nodejs Express App - Create and Retrieve Users (Lab 2)
+You are going to build a web application that allows end-users to create user profiles and view all profiles created.  This lab focuses on using Nodejs as the back-end server language and implementing core modules (File System core module), third-party modules (Express Framework), user-defined modules (User Object).  
+
 ## Requirements
 
 ### Step 1 - Create a web project and implement version control
 1.  Create a folder titled **[cweb1130_lab2]**
 2.  Make sure you are in the newly created directory and install git by running command **[git init]**
 3.  Run the command [git pull origin lab2] to pull down the README.md file that contain instructions
-4.  Create a .gitignore file and add **[node_modules]** to the file
+4.  Create a .gitignore file and add **[node_modules]** to the file.
 
 ### Step 2 - Configure and install Express
 1.  Run command **[npx express-generator --view hbs]**
@@ -139,7 +142,7 @@
 	var user = require('../model/user.js');
 	```	
 	Within the same file, add the following code delete the current route and add the following post route.  This route creates a user object from our model, reads in the previous array of objects the user.json file, adds our new object and writes the modified array of users objects to the user.json fi
-	```javascipt
+	```javascript
 	/* Create User */
 	router.post('/', function(req, res, next) {
 
@@ -198,12 +201,11 @@
 2.  Adjust README.md file at the end to include date of completion and course information.
 
 ### STEP 10 - Submission
-1.  Comment your name to the app.js file
+1.  Comment your name to the app.js file and 
 2.  Make sure your master branch is clean and push up your final changes.
 3.  In Canvas, submit the URL to your repository
-
-
 	
+
 #### Github Classroom Invitation URL: 
 	
 	
