@@ -1,6 +1,7 @@
 var express = require('express');
-//const { format } = require('morgan');
+const { format } = require('morgan');
 var router = express.Router();
+
 
 
 if (form.password.value < 8){
@@ -8,10 +9,14 @@ if (form.password.value < 8){
 }
 
 
-router.get('/', function(req, res,next) {
+router.post('/', function(req, res,next) {
+  var email = req.body.email;
+  var password = req.body.password;
+  
+  
   res.render('createaccount', { title: 'Create Account'})
   });
 
   
   module.exports = router;
-  
+  //var fs = require('fs');
