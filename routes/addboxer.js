@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-//makle functionaility for file sys available 
+//make functionaility for file sys available 
 var fs = require('fs');
 //bring in the boxers.json file
 var boxer = require('../model/boxerstructure.js');
