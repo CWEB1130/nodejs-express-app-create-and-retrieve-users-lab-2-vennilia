@@ -8,11 +8,12 @@ var logger = require('morgan');
 
 var createBoxerRouter = require('./routes/createboxer'); 
 var addBoxerRouter = require('./routes/addboxer');
-var createaccount = require('./routes/createaccount');
-var login = require('./routes/login');
+var createaccountRouter = require('./routes/createaccount');
+var loginRouter = require('./routes/login');
 
 var indexRouter = require('./routes/index');
 var boxersRouter = require('./routes/boxers');
+
 
 var app = express();
 
@@ -30,8 +31,8 @@ app.use('/', indexRouter);
 app.use('/boxers', boxersRouter);
 app.use('/create', createBoxerRouter); 
 app.use('/addboxer', addBoxerRouter);
-app.use('/createaccount', createaccount);
-app.use('/login', login);
+app.use('/createaccount', createaccountRouter);
+app.use('/login', loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

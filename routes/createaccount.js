@@ -1,22 +1,39 @@
 var express = require('express');
-const { format } = require('morgan');
 var router = express.Router();
 
 
+var fs = require('fs');
 
-if (form.password.value < 8){
-    alert("Password needs to be 8 or more characters long!");
-}
+var createaccount = require('../model/createaccountstructure.js');
 
 
-router.post('/', function(req, res,next) {
-  var email = req.body.email;
-  var password = req.body.password;
-  
-  
-  res.render('createaccount', { title: 'Create Account'})
-  });
+router.post('/', function(req, res, next) {
 
-  
-  module.exports = router;
-  //var fs = require('fs');
+ 
+  createaccount.email = req.body.email;
+  createaccount.password = req.body.password;
+
+  console.log(createaccount);
+
+  let sitecreateaccount = fs.readFileSync('./createaccout.json');
+
+
+  let sitecreateaccount = JSON.parse(createaccountData);
+
+  sitecreateaccount.push(createaccount);
+
+
+  const createaccountString = JSON.stringify(sitecreateaccount)
+  fs.writeFile('./createaccount.json', createaccountString, err => {
+    if (form.password.value < 8){
+      alert('Password needs to be 8 or more characters long!', err);
+      } else {
+          console.log('Successfully wrote file')
+      }
+  })
+
+
+});
+
+module.exports = router;
+
